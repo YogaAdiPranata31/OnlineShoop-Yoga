@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Toko online yang menyediakan berbagai produk berkualitas.">
+    <meta name="keywords" content="toko online, belanja, produk">
+    <title>Online Shopp Yoga</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h2 style="color: #ff5733;">Online<h1 style="color: #fff;">Shopp</h1></h2>
+        <div class="logo">
+            <img src="logo toko.webp" alt="Logo Toko Online">
+        </div>
+        <nav>
+            <section class="feature-section">
+            <ul class="menu">
+                <li><a href="home.html" class="feature-box">Home</a></li>
+                <li><a href="produk.html" class="feature-box">Produk</a></li>
+                <li><a href="index.html" class="feature-box">informasi</a></li>
+                <li><a href="blog.html" class="feature-box">Blog</a></li>
+                <li><a href="kontak.html" class="feature-box">Kontak</a></li>
+            </ul>
+            </section>
+        </nav>
+     
+            <div class="search-cart">
+                <input type="text" id="search-input" placeholder="Cari produk...">
+                <button onclick="searchProduct()">Cari</button>
+                <a href=""><img src="logo keranjang.png" alt="Keranjang Belanja"><span class="cart-count">(0)</span></a>
+        </div>
+    </header>
+
+    <!-- Slider/Banner -->
+    <section class="banner">
+        <div class="slider">
+            <img src="make up.webp" alt="Promo 1">
+            <img src="fasion.webp" alt="Promo 2">
+            <img src="fashion pria.jpg" alt="Promo 3">
+            <img src="fashion cewek.jpg" alt="Promo 3">
+        </div>
+    </section>
+
+    <!-- Produk Unggulan -->
+    <section class="featured-products">
+        <center><h3 style="color: #fff;">Terlaris</h3></center>
+        <div class="product-grid" id="product-grid">
+            <!-- Produk akan dimuat di sini melalui JavaScript -->
+        </div>
+    </section>
+
+   <!-- Bagian Apa kata mereka -->
+   <section class="testimonial-section">
+    <h2>Apa Kata Mereka</h2>
+    <div id="testimonial-list" class="testimonial-list">
+        <!-- Testimoni yang sudah ada akan muncul di sini -->
+    </div>
+    <div class="testimonial-form">
+        <h3>Beri Testimoni Anda</h3>
+        <form id="testimonial-form">
+            <input type="text" id="name" name="name" placeholder="Nama Anda" required>
+            <textarea id="message" name="message" rows="4" placeholder="Tuliskan testimoni Anda di sini..." required></textarea>
+            <button type="submit">Kirim Testimoni</button>
+        </form>
+    </div>
+</section>
+
+    <!-- Newsletter Subscription -->
+    <section class="newsletter">
+        <h2>Berlangganan Newsletter Kami</h2>
+        <form action="#">
+            <input type="email" placeholder="Masukkan email Anda">
+            <button>Berlangganan</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <!-- Bagian Kontak Kami -->
+    <section class="contact-section">
+        <h2>Kontak Kami</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <img src="maps.webp" alt="Lokasi">
+                <a href="https://www.google.com/maps/place/Jl.+Contoh+Alamat+No.123,+Kota+ABC" target="_blank">
+                   Jl. Wia-Wia, Blok F, Dusun 3.
+                </a>
+            </div>
+            <div class="contact-item">
+                <img src="telepon.png" alt="Telepon">
+                <a href="https://wa.wizard.id/4e757f">
+                    (+62) 82310897941
+                </a>
+            </div>
+            <div class="contact-item">
+                <img src="email.webp" alt="Email">
+                <a href="yogaadipranata895@gmail.com">
+                    yogaadipranata895@gmail.com
+                </a>
+            </div>
+            <div class="contact-item social-media">
+                <a href="https://www.facebook.com/biji.bijian.980?mibextid=kFxxJD" target="_blank">
+                    <img src="Logo_de_Facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.tiktok.com/@gachulo?_r=1&_d=e7k833g95bgbfh&sec_uid=MS4wLjABAAAA7WRFpe6IfdSh0TDa3sJeND8Sz-arBanEKC0FxGmch0tOyptQ-mA1ILxe27bK6xmW&share_author_id=7029558019366093851&sharer_language=id&source=h5_t&u_code=dlhg9hk8hgjjkl&timestamp=1724656257&user_id=7029558019366093851&sec_user_id=MS4wLjABAAAA7WRFpe6IfdSh0TDa3sJeND8Sz-arBanEKC0FxGmch0tOyptQ-mA1ILxe27bK6xmW&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7406248308714424069&share_link_id=0e870dbf-2b23-471e-89dc-7daac0b19f43&share_app_id=1180&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb0229&social_share_type=5&enable_checksum=1 " target="_blank">
+                    <img src="logo tik tok.webp" alt="TikTok">
+                </a>
+                <a href="https://www.instagram.com/yoga_310305/" target="_blank">
+                    <img src="instagram logo.webp" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk Toko Online</title>
+    <link rel="stylesheet" href="produk.css">
+</head>
+<body>
+    <header>
+        <h1>Produk Kami</h1>
+    </header>
+
+     <!-- Header -->
+        <header>
+            <div class="logo">
+                <img src="logo toko.webp" alt="Logo Toko Online">
+                <h1 style="color: #ff5733;">Online Shopp</h1>
+            </div>
+            <nav>
+                <section class="feature-section">
+                <ul class="menu">
+                    <li><a href="index.html" class="feature-box">Home</a></li>
+                    <li><a href="produk.html" class="feature-box"><b>Produk</b></a></li>
+                    <li><a href="#" class="feature-box"><b>informasi</b></a></li>
+                    <li><a href="blog.html" class="feature-box"><b>Blog</b></a></li>
+                    <li><a href="#" class="feature-box"><b>Kontak</b></a></li>
+                </ul>
+                </section>
+            </nav>
+        
+                <!-- Menu Produk -->
+                <header>
+                    <h1>Menu Produk</h1>
+                    <div class="search-bar">
+                        <input type="text" id="search-input" placeholder="Cari produk...">
+                        <button onclick="searchProduct()">Cari</button>
+                    </div>
+                    <div class="cart-icon" onclick="toggleCart()">
+                        🛒<span id="cart-count">0</span>
+                    </div>
+                </header>
+            
+                <!-- Notifikasi Pencarian -->
+                <div id="search-notification" style="display: none;">Produk tidak ditemukan!</div>
+            
+                <!-- Daftar Produk -->
+                <section class="product-list">
+                    <div class="product-item" data-name="Laptop ABC">
+                        <h3>Laptop ABC</h3>
+                        <p>Harga: Rp10.000.000</p>
+                        <button onclick="addToCart('Laptop ABC')">Tambah ke Keranjang</button>
+                    </div>
+                    <div class="product-item" data-name="Smartphone XYZ">
+                        <h3>Smartphone XYZ</h3>
+                        <p>Harga: Rp5.000.000</p>
+                        <button onclick="addToCart('Smartphone XYZ')">Tambah ke Keranjang</button>
+                    </div>
+                    <div class="product-item" data-name="Headphone DEF">
+                        <h3>Headphone DEF</h3>
+                        <p>Harga: Rp1.500.000</p>
+                        <button onclick="addToCart('Headphone DEF')">Tambah ke Keranjang</button>
+                    </div>
+                    <div class="product-item" data-name="Smartwatch GHI">
+                        <h3>Smartwatch GHI</h3>
+                        <p>Harga: Rp2.500.000</p>
+                        <button onclick="addToCart('Smartwatch GHI')">Tambah ke Keranjang</button>
+                    </div>
+                </section>
+            
+                <!-- Keranjang -->
+                <section id="cart" class="cart-section" style="display: none;">
+                    <h2>Keranjang Anda</h2>
+                    <ul id="cart-items"></ul>
+                </section>
+            
+                <script src="produk.js"></script>
+            </body>
+            </html>
+            

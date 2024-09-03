@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineShopp YOGA</title>
+    <link rel="stylesheet" href="produk.css">
+</head>
+<body>
+    <!-- Header dengan Logo dan Keranjang -->
+    <header>
+        <div class="logo" style="color: black;">Y<div style="color: black;">O<div style="color: white;">G<div style="color: black;">A</div></div></div></div>
+        <div class="logo">
+            <h5>Online<h3 style="color: black;">Shopp</h3></h5>
+            <img src="logo toko.webp" alt="Logo Toko" class="logo-img"> <!-- Tambahkan ini -->
+        </div>
+        <div class="cart-icon" onclick="toggleCart()">
+            🛒<span id="cart-count">0</span>
+        </div>
+    </header>
+    <!-- Menu Navigasi -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="produk.html">Produk</a></li>
+            <li><a href="index.html">Tentang Kami</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+    </nav>
+    <!-- Pencarian Produk -->
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Cari produk...">
+        <button onclick="searchProduct()">Cari</button>
+    </div>
+    <!-- Notifikasi Pencarian -->
+    <div id="search-notification" style="display: none;">Produk tidak ditemukan!</div>
+
+    
+      <!--produk terlaris-->
+      <center><h2>Produk Terlaris</h2></center>
+        <section class="product-list">
+            <div class="product-item" data-name="Lipstick" data-tags="makeup,kosmetik,kecantikan" onclick="redirectToProductPage('product1.html')">
+                <img src="lipstik.avif" alt="Lipstick">
+                <h3>Lipstick</h3>
+                <p>Harga: Rp100.000</p>
+                <p>Rating: ⭐⭐⭐⭐</p>
+                <button onclick="addToCart('Lipstick')">Tambah ke Keranjang</button>
+                <button onclick="showProductDetail('Lipstick')">Lihat Detail</button>
+            </div>
+            <div class="product-item" data-name="Foundation" data-tags="makeup,kosmetik,kecantikan" onclick="redirectToProductPage('product2.html')">
+                <img src="fundation.jpg" alt="Foundation">
+                <h3>Foundation</h3>
+                <p>Harga: Rp150.000</p>
+                <p>Rating: ⭐⭐⭐⭐⭐</p>
+                <button onclick="addToCart('Foundation')">Tambah ke Keranjang</button>
+                <button onclick="showProductDetail('Foundation')">Lihat Detail</button>
+            </div>
+            <div class="product-item" data-name="Iphone 15Promex" data-tags="elektronik,gadget,ponsel" onclick="redirectToProductPage('product3.html')">
+                <img src="iphone.webp" alt="Smartphone XYZ">
+                <h3>Iphone 15Promex</h3>
+                <p>Harga: Rp5.000.000</p>
+                <p>Rating: ⭐⭐⭐⭐⭐</p>
+                <button onclick="addToCart('Iphone 15Promex')">Tambah ke Keranjang</button>
+                <button onclick="showProductDetail('Iphone 15Promex')">Lihat Detail</button>
+            </div>
+            <div class="product-item" data-name="Kaos polos" data-tags="baju,kaos,baju cowok,kaos polos" onclick="redirectToProductPage('product4.html')">
+                <img src="baju pria.jpg" alt="kaos polos">
+                <h3>kaos polos</h3>
+                <p>Harga: Rp5.000.000</p>
+                <p>Rating: ⭐⭐⭐⭐⭐</p>
+                <button onclick="addToCart('kaos polos')">Tambah ke Keranjang</button>
+                <button onclick="showProductDetail('kaos polos')">Lihat Detail</button>
+            </div>
+        </div>
+    </section>
+
+
+           <!-- Daftar Produk -->
+    <center><h2>Produk Lainnya</h2></center>
+    <section class="product-list">
+        <div class="product-item" data-name="Lipstick" data-tags="makeup,kosmetik,kecantikan, alat kecantikan, melembabkan, cerah, lipstik merah, lipstik biru, Lipstik pink, lipstik alami">
+            <img src="lipstik.avif" class="active-slide" alt="Lipstick">
+            <h3>Lipstick Waterproup </h3>
+            <p>Harga: Rp100.000</p>
+            <p>Rating: ⭐⭐⭐⭐</p>
+            <button onclick="addToCart('Lipstick')">Tambah ke Keranjang</button>
+            <button onclick="showProductDetail('Lipstick')">Lihat Detail</button>
+        </div>
+        <div class="product-item" data-name="Foundation" data-tags="makeup,kosmetik,kecantikan">
+            <img src="fundation.jpg" alt="Foundation">
+            <h3>Foundation</h3>
+            <p>Harga asli:<s>Rp200.000</s></p>
+            <p>Harga: Rp150.000</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+            <button onclick="addToCart('Foundation')">Tambah ke Keranjang</button>
+            <button onclick="showProductDetail('Foundation')">Lihat Detail</button>
+        </div>
+        <div class="product-item" data-name="Iphone 15Promex" data-tags="elektronik,gadget,ponsel">
+            <img src="iphone.webp" alt="Iphone 15Promex">
+            <h3>Iphone 15Promex</h3>
+            <p>Harga asli:<s>Rp15.000.000</s></p>
+            <p>Harga: Rp12.500.000</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+            <button onclick="addToCart('Iphone 15Promex')">Tambah ke Keranjang</button>
+            <button onclick="showProductDetail('Iphone 15Promex')">Lihat Detail</button>
+        </div>
+        <div class="product-item" data-name="Kaos polos" data-tags="baju,kaos,baju cowok,kaos polos">
+            <img src="baju pria.jpg" alt="kaos polos">
+            <h3>Kaos Hitam Polos Pria Lembut</h3>
+            <p>Harga: Rp50.000</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+            <button onclick="addToCart('kaos polos')">Tambah ke Keranjang</button>
+            <button onclick="showProductDetail('kaos polos')">Lihat Detail</button>
+        </div>
+        <div class="product-item" data-name="Kaos polos" data-tags="Glad2Glow moisturizer Gell, skincare, kecantikan, perawatan kulit">
+            <img src="mois glowd 3pcs.jpg" alt="Glad2Glow moisturizer Gell">
+            <h3>Glad2Glow Moisturizer Gell</h3>
+            <p>Harga: Rp111.000</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+            <button onclick="addToCart('Glad2Glow moisturizer Gell')">Tambah ke Keranjang</button>
+            <button onclick="showProductDetail('Glad2Glow moisturizer Gell')">Lihat Detail</button>
+        </div>
+        <div class="product-item" data-name="Kaos polos" data-tags="Glad2Glow moisturizer Gell, Skintific moisturizer Gell, skincare, perawatan kulit,  kecantikan">
+            <img src="skintific mois.jpeg" alt="Skintific moisturizer Gell">
+            <h3>Skintific Moisturizer Gell</h3>
+            <p>Harga: Rp100.000</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+            <button onclick="addToCart('Skintific moisturizer Gell')">Tambah ke Keranjang</button>
+            <button onclick="showProductDetail('Skintific moisturizer Gell')">Lihat Detail</button>
+        </div>
+        <div class="product-item" data-name="Kaos polos" data-tags="Glad2Glow moisturizer Gell, Skintific moisturizer Gell, skincare, The Orignote Moisturizer Gell, perawatan kulit,  kecantikan">
+            <img src="the orignote mois.jpg" alt="The Orignote Moisturizer Gell">
+            <h3>The Orignote Moisturizer Gell</h3>
+            <p>Harga: Rp50.000</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+            <button onclick="addToCart('The Orignote Moisturizer Gell')">Tambah ke Keranjang</button>
+            <button onclick="showProductDetail('The Orignote Moisturizer Gell')">Lihat Detail</button>
+        </div>
+        <div class="product-item" data-name="Kaos polos" data-tags="Glad2Glow moisturizer Gell, Skintific moisturizer Gell, skincare, The Orignote Moisturizer Gell, Glowd2Glow Moisturizer Gell, perawatan kulit,  kecantikan">
+            <img src="glowd2glow mois.webp" alt="Glowd2Glow Moisturizer Gell">
+            <h3>Glowd2Glow Moisturizer Gell</h3>
+            <p>Harga: Rp70.000</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+            <button onclick="addToCart('Glowd2Glow Moisturizer Gell')">Tambah ke Keranjang</button>
+            <button onclick="showProductDetail('Glowd2Glow Moisturizer Gell')">Lihat Detail</button>
+        </div>
+        <div class="product-item" data-name="Kaos polos" data-tags="Glad2Glow moisturizer Gell, Skintific moisturizer Gell, skincare, The Orignote Moisturizer Gell, Glowd2Glow Moisturizer Gell, Ceramic Moisturizer Gell, perawatan kulit, kecantikan">
+            <img src="ceramic mois.jpg" alt="Ceramic Moisturizer Gell">
+            <h3>Ceramic Moisturizer Gell</h3>
+            <p>Harga: Rp70.000</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+            <button onclick="addToCart('Ceramic Moisturizer Gell')">Tambah ke Keranjang</button>
+            <button onclick="showProductDetail('Ceramic Moisturizer Gell')">Lihat Detail</button>
+        </div>
+        <div class="product-item" data-name="Kaos polos" data-tags="jam tangan pria digital led skmei DG1863, jam tangan, jam, jam anti air, waterprof, jam pria, jam keren">
+            <img src="jam tangan pria digital led skmei DG1863.jpg" alt="jam tangan pria digital led skmei DG1863">
+            <h3>Jam Tangan Pria Digital Led Skmei DG1863</h3>
+            <p>Harga: Rp200.000</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+            <button onclick="addToCart('jam tangan pria digital led skmei DG1863')">Tambah ke Keranjang</button>
+            <button onclick="showProductDetail('jam tangan pria digital led skmei DG1863')">Lihat Detail</button>
+        </div>
+        <div class="product-item" data-name="Kaos polos" data-tags="jam tangan pria digital led skmei DG1863, jam tangan, jam, jam anti air, waterprof, jam pria, jam keren">
+            <img src="SKMEI jam tangan pria analog sporty waterproof.jpg" alt="jam tangan pria digital led skmei DG1863">
+            <h3>SKMEI Jam Tangan Pria Analog Sporty Waterproof</h3>
+            <p>Harga: Rp200.000</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+            <button onclick="addToCart('jam tangan pria digital led skmei DG1863')">Tambah ke Keranjang</button>
+            <button onclick="showProductDetail('jam tangan pria digital led skmei DG1863')">Lihat Detail</button>
+        </div>
+        <!-- Tambahkan lebih banyak produk di sini -->
+    </section>
+
+    <!-- Keranjang Belanja -->
+    <section id="cart" class="cart-section" style="display: none;">
+        <h2>Keranjang Anda</h2>
+        <p id="cart-total">Total: Rp 0</p> <!-- Total harga -->
+        <ul id="cart-items"></ul>
+        <button onclick="checkout()">Checkout</button>
+    <button id="close-cart-btn" onclick="closeCart()">Tutup Keranjang</button> <!-- Tombol untuk menutup keranjang belanja -->
+    <div id="cart-items"> <!-- Daftar produk dalam keranjang -->
+        <!-- Item-item dalam keranjang akan ditambahkan di sini -->
+    </div>
+</div>
+    <div id="checkout"><!-- Bagian Checkout -->
+        <h2>Pilih Metode Pembayaran</h2>
+    <!-- Metode Pembayaran -->
+    <button onclick="selectPaymentMethod('DANA')" style="background-color: purple;">DANA</button>
+    <button onclick="selectPaymentMethod('Alfamart')"  style="background-color: purple;">Alfamart</button>
+    <button onclick="selectPaymentMethod('OVO')" style="background-color: purple;">OVO</button>
+</div>
+    </section>
+        
+    </div>
+      <!-- Detail Produk -->
+      <section id="product-detail" class="product-detail-section" style="display: none;">
+        <button onclick="closeProductDetail()">Tutup</button>
+        <h2 id="detail-title" style="color: #fff;">Nama Produk</h2>
+        <img id="detail-image" src="" alt="Foto Produk">
+        <p id="detail-description"  style="color: #fff;">Deskripsi Produk</p>
+        <p id="detail-price"  style="color: #fff;">Harga: </p>
+        <p id="detail-rating"  style="color: #fff;">Rating: </p>
+        <button onclick="addToCartFromDetail()">Tambah ke Keranjang</button>
+    </section>
+
+    <!-- Footer 
+    <footer>
+        <p>© 2024 OnlineShopp. YogaAdiPranata.</p>
+    </footer>-->
+
+    <script src="produk.js"></script>
+</body>
+</html>

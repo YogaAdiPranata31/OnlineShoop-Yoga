@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineShopp Yoga</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo" style="color: black;">Y<div style="color: black;">O<div style="color: white;">G<div style="color: black;">A</div></div></div></div>
+        <div class="logo">
+            <h5>Online<h3 style="color: black;">Shopp</h3></h5>
+            <img src="logo toko.webp" alt="Logo Toko" class="logo-img"> <!-- Tambahkan ini -->
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="index.html">Tentang Kami</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+ <!-- Slider -->
+ <div class="slider">
+    <div class="slide fade" data-duration="3000"> <!-- 3 detik -->
+        <img src="fashion cewek.jpg" alt="Gambar 1">
+    </div>
+    <div class="slide fade" data-duration="5000"> <!-- 5 detik -->
+        <img src="fashion pria.jpg" alt="Gambar 2">
+    </div>
+    <div class="slide fade" data-duration="5000"> <!-- 5 detik -->
+        <img src="fasion.webp" alt="Gambar 3">
+    </div>
+    <div class="slide fade" data-duration="5000"> <!-- 5 detik -->
+        <img src="make up.webp" alt="Gambar 4">
+    </div>
+    <div class="slide fade" data-duration="65000"> <!-- 7 detik -->
+        <video class="slide-video" autoplay>
+            <source src="iklan.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+
+    <!-- Produk Terlaris -->
+    <section class="best-sellers">
+        <h2>Klik Produk Untuk Melihat Produk Terlaris</h2>
+        <div class="product-list">
+            <div class="product-item" onclick="redirectToProductPage('produk.html')">
+                <img src="lipstik.avif" alt="Produk 1">
+            </div>
+            <div class="product-item" onclick="redirectToProductPage('Produk.html')">
+                <img src="fundation.jpg" alt="Produk 2">
+            </div>
+            <div class="product-item" onclick="redirectToProductPage('Produk.html')">
+                <img src="iphone.webp" alt="Produk 3">
+            </div>
+            <div class="product-item" onclick="redirectToProductPage('Produk.html')">
+                <img src="baju pria.jpg" alt="Produk 4">
+            </div>
+        </div>
+    </section>
+
+    <!-- Berlangganan -->
+    <section class="subscribe">
+        <h2>Berlangganan untuk Update Terbaru</h2>
+        <form action="#">
+            <input type="email" placeholder="Masukkan email Anda">
+            <button type="submit">Berlangganan</button>
+        </form>
+    </section>
+
+    <!-- Komentar -->
+    <section class="comments">
+        <h2>Apa Kata Mereka</h2>
+        <div class="comment-list">
+            <div class="comment">
+                <p>"Produk berkualitas! Pengiriman cepat."</p>
+                <span>Yoga</span>
+            </div>
+            <div class="comment">
+                <p>"Pelayanan ramah, sangat puas."</p>
+                <span>Yogi</span>
+            </div>
+            <div class="comment">
+                <p>"Rekomendasi toko online terbaik!"</p>
+                <span>Yogo</span>
+            </div>
+        </div>
+        <textarea placeholder="Tulis komentar Anda..."></textarea>
+        <button>Kirim Komentar</button>
+    </section>
+
+   <!-- Footer -->
+    <!-- Bagian Kontak Kami -->
+    <section class="contact-section">
+        <h2>Kontak Kami</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <img src="maps.webp" alt="Lokasi">
+                <a href="https://www.google.com/maps/place/Jl.+Contoh+Alamat+No.123,+Kota+ABC" target="_blank">
+                   Jl. Wia-Wia, Blok F, Dusun 3.
+                </a>
+            </div>
+            <div class="contact-item">
+                <img src="telepon.png" alt="Telepon">
+                <a href="https://wa.wizard.id/4e757f">
+                    (+62) 82310897941
+                </a>
+            </div>
+            <div class="contact-item">
+                <img src="email.webp" alt="Email">
+                <a href="yogaadipranata895@gmail.com">
+                    yogaadipranata895@gmail.com
+                </a>
+            </div>
+            <div class="contact-item social-media">
+                <a href="https://www.facebook.com/biji.bijian.980?mibextid=kFxxJD" target="_blank">
+                    <img src="Logo_de_Facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.tiktok.com/@gachulo?_r=1&_d=e7k833g95bgbfh&sec_uid=MS4wLjABAAAA7WRFpe6IfdSh0TDa3sJeND8Sz-arBanEKC0FxGmch0tOyptQ-mA1ILxe27bK6xmW&share_author_id=7029558019366093851&sharer_language=id&source=h5_t&u_code=dlhg9hk8hgjjkl&timestamp=1724656257&user_id=7029558019366093851&sec_user_id=MS4wLjABAAAA7WRFpe6IfdSh0TDa3sJeND8Sz-arBanEKC0FxGmch0tOyptQ-mA1ILxe27bK6xmW&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7406248308714424069&share_link_id=0e870dbf-2b23-471e-89dc-7daac0b19f43&share_app_id=1180&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb0229&social_share_type=5&enable_checksum=1 " target="_blank">
+                    <img src="logo tik tok.webp" alt="TikTok">
+                </a>
+                <a href="https://www.instagram.com/yoga_310305/" target="_blank">
+                    <img src="instagram logo.webp" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 OnlineShopp. YogaAdiPranata.</p>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+</html>
